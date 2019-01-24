@@ -19,5 +19,7 @@ matrix:
   allow_failures:
   - python: "3.8-dev"
 
+install: pip install praw
+
 script:
  - python $py_file
