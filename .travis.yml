@@ -6,10 +6,18 @@ python:
  - "3.6"
  #- "3.7"
  #- "3.8-dev"
+ 
+env:
+ - py_file: "bot3.py"
+ - py_file: "bot4.py"
+ - py_file: "Usernames/un.py"
+ - py_file: "SubredditBirthdays/sb.py"
+ - py_file: "Newsletterbot/Newsletterly_x.py"
+ - py_file: "LockFinder/lockfinder.py"
 
 matrix:
   allow_failures:
   - python: "3.8-dev"
 
 script:
- - python /**/*.py
+ - python $py_file
